@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    dynamic:
+      primary: master
+      strict: false
+      datasource:
+        master:
+          driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+          url: jdbc:p6spy:mysql://43.142.62.156:12806/test?characterEncoding=utf-8&autoReconnect=true&useSSL=false
+          username: root
+          password: DD123456aa
+        slave_1:
+          driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+          url: jdbc:p6spy:mysql://43.142.62.156:12906/test?characterEncoding=utf-8&autoReconnect=true&useSSL=false
+          username: root
+          password: DD123456aa
+        slave_2:
+          driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+          url: jdbc:p6spy:mysql://43.142.62.156:13006/test?characterEncoding=utf-8&autoReconnect=true&useSSL=false
+          username: root
+          password: DD123456aa
+server:
+  port: 8123
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: is_delete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl

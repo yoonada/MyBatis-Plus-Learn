@@ -11,17 +11,17 @@ public interface Parameter {
     /**
      * 需要生成的表
      */
-    String[] INCLUDE_TABLES = new String[]{"sys_dept", "sys_user"};
+    String[] INCLUDE_TABLES = new String[]{"sys_test"};
 
     /**
      * 代码输出路径
      */
-    String OUTPUT_DIR = "C:\\Users\\dell\\Desktop\\MyBatis-Plus-Learn\\generate";
+    String OUTPUT_DIR = "C:\\Users\\dell\\Desktop\\MyBatis-Plus-Learn\\demo";
 
     /**
      * 父级包名
      */
-    String PARENT_PACKAGE = "com.yoona.generate";
+    String PARENT_PACKAGE = "com.yoona.demo";
 
     /**
      * 父级模块名称
@@ -36,7 +36,7 @@ public interface Parameter {
     /**
      * 数据库链接
      */
-    String JDBC_URL = "jdbc:mysql://192.168.118.128:3307/yoona-cloud?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai";
+    String JDBC_URL = "jdbc:mysql://43.142.62.156:12806/test?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai";
 
     /**
      * 账户名
@@ -57,7 +57,8 @@ public interface Parameter {
     /**
      * 父级实体
      */
-    String PARENT_ENTITY = "com.demo.generate.common.BaseEntity";
+    String PARENT_ENTITY = "com.yoona.demo.common.BaseEntity";
+//    String PARENT_ENTITY = "com.demo.generate.common.BaseEntity";
 
 
 }
